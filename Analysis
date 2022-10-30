@@ -1,0 +1,48 @@
+This is a write-up for the deep learning model for the non- profit foundation Alphabet Soup.
+
+
+ OVERVIEW ANALYSIS
+
+This analysis contains a CSV from more than 34,000 organizations that have received funding from Alphabet Soup over the years. This analysis aims at creating an algorithm to predict whether or not applicants for funding will be successful using features set to create a binary classifier that is capable of predicting whether applicants will be successful if funded by Alphabet Soup.
+
+Data Preprocessing
+What variable(s) are the target(s) for your model?
+The target variable alogrithim was the column  IS_SUCCESSFUL help it select the applicants for funding with the best chance of success in their ventures.
+
+What variable(s) are the features for your model?
+The feature used is the IS_SUCCESSFUL.
+
+What variable(s) are neither targets nor features, and should be removed from the input data?
+The "EIN" and "Name" column were features that had to be removed from the data.
+
+COMPILING, TRAINING AND EVALUTING THE MODEL
+
+How many neurons, layers, and activation functions did you select for your neural network model, and why?
+For the DeepLearning and Optimization models , the neural network was applied using a three multiple layers, where the number of features was associated to the hidden nodes.
+
+Were you able to achieve the target model performance?
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+dense (Dense)                (None, 80)                3520      
+_________________________________________________________________
+dense_1 (Dense)              (None, 30)                2430      
+_________________________________________________________________
+dense_2 (Dense)              (None, 1)                 31        
+=================================================================
+Total params: 5,981
+Trainable params: 5,981
+Non-trainable params: 0
+_________________________________________________________________
+
+
+8575/8575 - 0s - loss: 0.5578 - acc: 0.7263
+Loss: 0.557812534073699, Accuracy: 0.7262973785400391
+
+The accuracy of the model is 0.7262973785400391 and the Loss: 0.557812534073699. The accuracy fell shortly below  0.75. 
+
+Trail and Error to add more  nuetrons and layers and alot of different configurations of activation functions were attempted in order to increase the models performance.
+
+
+SUMMARY
+It is recommeded that deep learning models need to have mulitple layers and a lot of neutrons and the right activation function in order to reach the accuracy of binary classification models.
